@@ -19,6 +19,11 @@
   "devDependencies": {
     "sort-package-json": "1.11.0"
   },
+  "renovate": {
+    "extends": [
+      "config"
+    ]
+  },
   "renovate-config": {
     "default": {
       "extends": [
