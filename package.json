@@ -1,0 +1,48 @@
+{
+  "name": "@mi11er/renovate-config",
+  "version": "0.0.0",
+  "description": "Renovate config for mi11er.net projects.",
+  "keywords": [
+    "renovate",
+    "renovate-config"
+  ],
+  "homepage": "https://github.com/mi11er-net/renovate-config",
+  "bugs": {
+    "url": "https://github.com/mi11er-net/renovate-config/issues"
+  },
+  "license": "MIT",
+  "author": "Matthew Miller <matthew@mi11er.net> (https://mi11er.net)",
+  "repository": "git@github.com:mi11er-net/renovate-config.git",
+  "scripts": {
+    "sort-package-json": "sort-package-json"
+  },
+  "devDependencies": {
+    "sort-package-json": "1.11.0"
+  },
+  "renovate": {
+    "extends": [
+      "@mi11er"
+    ]
+  },
+  "renovate-config": {
+    "default": {
+      "extends": [
+        "config:base"
+      ],
+      "packageRules": [
+        {
+          "packagePatterns": [
+            "eslint"
+          ],
+          "groupName": "eslint"
+        },
+        {
+          "packagePatterns": [
+            "semantic-release"
+          ],
+          "groupName": "semantic-release"
+        }
+      ]
+    }
+  }
+}
