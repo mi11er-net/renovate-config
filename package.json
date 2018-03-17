@@ -28,6 +28,8 @@
   },
   "devDependencies": {
     "@mi11er/eslint-config": "2.2.0",
+    "@semantic-release/changelog": "2.0.1",
+    "@semantic-release/git": "4.0.1",
     "commitizen": "2.9.6",
     "cz-conventional-changelog": "2.1.0",
     "eslint-config-airbnb-base": "12.1.0",
@@ -43,7 +45,40 @@
     "nsp": "3.2.1",
     "prettier": "1.11.1",
     "pretty-quick": "1.4.1",
+    "semantic-release": "15.1.2",
     "sort-package-json": "1.11.0"
+  },
+  "release": {
+    "branch": "master",
+    "verifyConditions": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git",
+      "@semantic-release/github"
+    ],
+    "prepare": [
+      "@semantic-release/changelog",
+      {
+        "path": "@semantic-release/npm",
+        "tarballDir": "release"
+      },
+      {
+        "path": "@semantic-release/git",
+        "assets": ["**"]
+      }
+    ],
+    "publish": [
+      "@semantic-release/npm",
+      {
+        "path": "@semantic-release/github",
+        "assets": [
+          {
+            "path": "release/*.tgz",
+            "label": "Package tarball"
+          }
+        ]
+      }
+    ]
   },
   "renovate": {
     "extends": ["@mi11er"]
