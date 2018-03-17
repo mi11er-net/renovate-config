@@ -1,0 +1,6 @@
+# Dependency directories
+/node_modules/
+
+# Let's lint these
+!/.prettierrc.js
+!/.eslintrc.js
