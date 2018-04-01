@@ -10,7 +10,7 @@
   "license": "MIT",
   "author": "Matthew Miller <matthew@mi11er.net> (https://mi11er.net)",
   "files": ["package.json", "README.MD", "CHANGELOG.md", "LICENSE"],
-  "repository": "git@github.com:mi11er-net/renovate-config.git",
+  "repository": "https://github.com/mi11er-net/renovate-config.git",
   "scripts": {
     "precommit": "run-s lint-staged pretty-quick nsp",
     "lint": "eslint --fix .",
