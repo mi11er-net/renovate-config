@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-echo -n "${GPG_KEY}" | base64 -d | /usr/bin/gpg --batch --no-tty --import --
+echo -n "${GIT_KEY}" | base64 -d | /usr/bin/gpg --batch --no-tty --import --
 
-git config --local gpg.program ".circle/sign.sh"
+git config --local gpg.program ".circleci/sign.sh"
 
 git config --local commit.gpgsign true
 
