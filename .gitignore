@@ -7,3 +7,7 @@
 
 # Node
 /.npmrc
+
+# Release Dir
+/release/
+
