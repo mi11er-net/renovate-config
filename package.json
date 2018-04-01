@@ -87,6 +87,9 @@
   "renovate-config": {
     "default": {
       "extends": ["config:base"],
+      "lockFileMaintenance": {
+        "enabled": true
+      },
       "packageRules": [
         {
           "packagePatterns": ["eslint"],
