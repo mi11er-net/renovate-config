@@ -1,5 +1,13 @@
 # Dependency directories
 /node_modules/
 
+# Logs
+/npm-debug.log
+/yarn-error.log
+
 # Node
 /.npmrc
+
+# Release Dir
+/release/
+

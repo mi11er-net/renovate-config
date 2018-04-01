@@ -2,44 +2,98 @@
   "name": "@mi11er/renovate-config",
   "version": "0.0.0",
   "description": "Renovate config for mi11er.net projects.",
-  "keywords": [
-    "renovate",
-    "renovate-config"
-  ],
+  "keywords": ["renovate", "renovate-config"],
   "homepage": "https://github.com/mi11er-net/renovate-config",
   "bugs": {
     "url": "https://github.com/mi11er-net/renovate-config/issues"
   },
   "license": "MIT",
   "author": "Matthew Miller <matthew@mi11er.net> (https://mi11er.net)",
-  "repository": "git@github.com:mi11er-net/renovate-config.git",
+  "files": ["package.json", "README.MD", "CHANGELOG.md", "LICENSE"],
+  "repository": "https://github.com/mi11er-net/renovate-config.git",
   "scripts": {
-    "sort-package-json": "sort-package-json"
+    "precommit": "run-s lint-staged pretty-quick nsp",
+    "lint": "eslint --fix .",
+    "lint-staged": "lint-staged",
+    "nsp": "nsp check",
+    "semantic-release": "semantic-release",
+    "sort-package-json": "sort-package-json",
+    "test": "run-s nsp",
+    "pretty-quick": "pretty-quick --staged"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "devDependencies": {
+    "@mi11er/eslint-config": "2.2.1",
+    "@semantic-release/changelog": "2.0.1",
+    "@semantic-release/git": "4.0.1",
+    "commitizen": "2.9.6",
+    "cz-conventional-changelog": "2.1.0",
+    "eslint": "4.19.1",
+    "eslint-config-airbnb-base": "12.1.0",
+    "eslint-config-prettier": "2.9.0",
+    "eslint-plugin-import": "2.9.0",
+    "eslint-plugin-no-unsafe-innerhtml": "1.0.16",
+    "eslint-plugin-optimize-regex": "1.1.5",
+    "eslint-plugin-scanjs-rules": "0.2.1",
+    "eslint-plugin-security": "1.4.0",
+    "husky": "0.14.3",
+    "lint-staged": "7.0.2",
+    "npm-run-all": "4.1.2",
+    "nsp": "3.2.1",
+    "prettier": "1.11.1",
+    "pretty-quick": "1.4.1",
+    "semantic-release": "15.1.4",
     "sort-package-json": "1.11.0"
   },
-  "renovate": {
-    "extends": [
-      "@mi11er"
+  "release": {
+    "branch": "master",
+    "verifyConditions": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git",
+      "@semantic-release/github"
+    ],
+    "prepare": [
+      "@semantic-release/changelog",
+      {
+        "path": "@semantic-release/npm",
+        "tarballDir": "release"
+      },
+      {
+        "path": "@semantic-release/git",
+        "assets": ["**"]
+      }
+    ],
+    "publish": [
+      "@semantic-release/npm",
+      {
+        "path": "@semantic-release/github",
+        "assets": [
+          {
+            "path": "release/*.tgz",
+            "label": "Package tarball"
+          }
+        ]
+      }
     ]
+  },
+  "renovate": {
+    "extends": ["@mi11er"]
   },
   "renovate-config": {
     "default": {
-      "extends": [
-        "config:base"
-      ],
+      "extends": ["config:base"],
       "packageRules": [
         {
-          "packagePatterns": [
-            "eslint"
-          ],
+          "packagePatterns": ["eslint"],
           "groupName": "eslint"
         },
         {
-          "packagePatterns": [
-            "semantic-release"
-          ],
+          "packagePatterns": ["semantic-release"],
           "groupName": "semantic-release"
         }
       ]
