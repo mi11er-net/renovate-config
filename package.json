@@ -54,7 +54,7 @@
     "nsp": "3.2.1",
     "prettier": "1.11.1",
     "pretty-quick": "1.4.1",
-    "semantic-release": "15.1.4",
+    "semantic-release": "15.1.5",
     "sort-package-json": "1.11.0"
   },
   "release": {
