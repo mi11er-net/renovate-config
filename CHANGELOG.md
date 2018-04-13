@@ -1,3 +1,11 @@
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/mi11er-net/renovate-config/compare/v1.1.0...v1.1.1) (2018-04-13)
+
+
+### Bug Fixes
+
+* **renovate:** change group name ([5380a15](https://github.com/mi11er-net/renovate-config/commit/5380a15))
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/mi11er-net/renovate-config/compare/v1.0.0...v1.1.0) (2018-04-13)
 
