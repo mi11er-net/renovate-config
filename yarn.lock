@@ -120,13 +120,13 @@
     node-fetch "^2.1.1"
     url-template "^2.0.8"
 
-"@semantic-release/changelog@2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@semantic-release/changelog/-/changelog-2.0.1.tgz#7a90dff17d941f6cb6664db42e191292cface8b3"
+"@semantic-release/changelog@2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@semantic-release/changelog/-/changelog-2.0.2.tgz#9972738dc97cf8b516f4200b8ee92e708e415d65"
   dependencies:
     "@semantic-release/error" "^2.1.0"
     aggregate-error "^1.0.0"
-    fs-extra "^5.0.0"
+    fs-extra "^6.0.0"
     lodash "^4.17.4"
 
 "@semantic-release/commit-analyzer@^5.0.0":
@@ -143,16 +143,16 @@
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@semantic-release/error/-/error-2.2.0.tgz#ee9d5a09c9969eade1ec864776aeda5c5cddbbf0"
 
-"@semantic-release/git@4.0.2":
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/@semantic-release/git/-/git-4.0.2.tgz#d1fdd45ba08ec53120c1ed2aa925b7ee762e6a26"
+"@semantic-release/git@4.0.3":
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/@semantic-release/git/-/git-4.0.3.tgz#9be69730fdf6adc1df381a19b9db2800074b35c4"
   dependencies:
     "@semantic-release/error" "^2.1.0"
     aggregate-error "^1.0.0"
     debug "^3.1.0"
     dir-glob "^2.0.0"
     execa "^0.10.0"
-    fs-extra "^5.0.0"
+    fs-extra "^6.0.0"
     lodash "^4.17.4"
     micromatch "^3.1.4"
     p-reduce "^1.0.0"
@@ -1073,6 +1073,10 @@ detect-indent@4.0.0:
   dependencies:
     repeating "^2.0.0"
 
+detect-indent@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/detect-indent/-/detect-indent-5.0.0.tgz#3871cc0a6a002e8c3e5b3cf7f336264675f06b9d"
+
 diff@^3.2.0:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/diff/-/diff-3.5.0.tgz#800c0dd1e0a8bfbc95835c202ad220fe317e5a12"
@@ -1129,9 +1133,9 @@ elegant-spinner@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/elegant-spinner/-/elegant-spinner-1.0.1.tgz#db043521c95d7e303fd8f345bedc3349cfb0729e"
 
-env-ci@^1.0.0:
-  version "1.7.2"
-  resolved "https://registry.yarnpkg.com/env-ci/-/env-ci-1.7.2.tgz#bf50ed2ad4f7364f85a2b038b819921dabdbd2ba"
+env-ci@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/env-ci/-/env-ci-2.0.1.tgz#163d9bf660e869ef4b08dda5cf94360fb1de03f7"
   dependencies:
     execa "^0.10.0"
     java-properties "^0.2.9"
@@ -1797,6 +1801,14 @@ fs-extra@^1.0.0:
 fs-extra@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-5.0.0.tgz#414d0110cdd06705734d055652c5411260c31abd"
+  dependencies:
+    graceful-fs "^4.1.2"
+    jsonfile "^4.0.0"
+    universalify "^0.1.0"
+
+fs-extra@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-6.0.0.tgz#0f0afb290bb3deb87978da816fcd3c7797f3a817"
   dependencies:
     graceful-fs "^4.1.2"
     jsonfile "^4.0.0"
@@ -2819,9 +2831,9 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-lint-staged@7.0.4:
-  version "7.0.4"
-  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-7.0.4.tgz#1aa7f27427e4c4c85d4d6524ac98aac10cbaf1b8"
+lint-staged@7.0.5:
+  version "7.0.5"
+  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-7.0.5.tgz#1ed04c4bb2013579a3d4df4dfe0f2ea1cd988fad"
   dependencies:
     app-root-path "^2.0.1"
     chalk "^2.3.1"
@@ -2841,7 +2853,7 @@ lint-staged@7.0.4:
     p-map "^1.1.1"
     path-is-inside "^1.0.2"
     pify "^3.0.0"
-    please-upgrade-node "^3.0.1"
+    please-upgrade-node "^3.0.2"
     staged-git-files "1.1.1"
     string-argv "^0.0.2"
     stringify-object "^3.2.2"
@@ -3581,7 +3593,7 @@ pkg-dir@^1.0.0:
   dependencies:
     find-up "^1.0.0"
 
-please-upgrade-node@^3.0.1:
+please-upgrade-node@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/please-upgrade-node/-/please-upgrade-node-3.0.2.tgz#7b9eaeca35aa4a43d6ebdfd10616c042f9a83acc"
   dependencies:
@@ -4010,9 +4022,9 @@ sax@^1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
 
-semantic-release@15.1.7:
-  version "15.1.7"
-  resolved "https://registry.yarnpkg.com/semantic-release/-/semantic-release-15.1.7.tgz#b29eef1b9443f75addab7c2e353338b72b9b628d"
+semantic-release@15.2.0:
+  version "15.2.0"
+  resolved "https://registry.yarnpkg.com/semantic-release/-/semantic-release-15.2.0.tgz#3f0177a5ac71fe78d88d3ed8afe41414b3d015b9"
   dependencies:
     "@semantic-release/commit-analyzer" "^5.0.0"
     "@semantic-release/error" "^2.2.0"
@@ -4023,7 +4035,7 @@ semantic-release@15.1.7:
     chalk "^2.3.0"
     cosmiconfig "^4.0.0"
     debug "^3.1.0"
-    env-ci "^1.0.0"
+    env-ci "^2.0.0"
     execa "^0.10.0"
     get-stream "^3.0.0"
     git-log-parser "^1.2.0"
@@ -4166,10 +4178,11 @@ sort-object-keys@^1.1.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/sort-object-keys/-/sort-object-keys-1.1.2.tgz#d3a6c48dc2ac97e6bc94367696e03f6d09d37952"
 
-sort-package-json@1.12.0:
-  version "1.12.0"
-  resolved "https://registry.yarnpkg.com/sort-package-json/-/sort-package-json-1.12.0.tgz#cb5c8b583270e23624f1780cf4ba025299403a96"
+sort-package-json@1.13.0:
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/sort-package-json/-/sort-package-json-1.13.0.tgz#c029eeb99c72918b468b9c2a807b7de48cc0cfcf"
   dependencies:
+    detect-indent "^5.0.0"
     sort-object-keys "^1.1.1"
 
 source-map-resolve@^0.5.0:
