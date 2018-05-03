@@ -2,22 +2,14 @@
   "name": "@mi11er/renovate-config",
   "version": "1.1.2",
   "description": "Renovate config for mi11er.net projects.",
-  "keywords": [
-    "renovate",
-    "renovate-config"
-  ],
+  "keywords": ["renovate", "renovate-config"],
   "homepage": "https://github.com/mi11er-net/renovate-config",
   "bugs": {
     "url": "https://github.com/mi11er-net/renovate-config/issues"
   },
   "license": "MIT",
   "author": "Matthew Miller <matthew@mi11er.net> (https://mi11er.net)",
-  "files": [
-    "package.json",
-    "README.MD",
-    "CHANGELOG.md",
-    "LICENSE"
-  ],
+  "files": ["package.json", "README.MD", "CHANGELOG.md", "LICENSE"],
   "repository": "https://github.com/mi11er-net/renovate-config.git",
   "scripts": {
     "precommit": "run-s lint-staged pretty-quick nsp",
@@ -73,9 +65,7 @@
       },
       {
         "path": "@semantic-release/git",
-        "assets": [
-          "**"
-        ]
+        "assets": ["**"]
       }
     ],
     "publish": [
@@ -92,37 +82,23 @@
     ]
   },
   "renovate": {
-    "extends": [
-      "@mi11er"
-    ]
+    "extends": ["@mi11er"]
   },
   "renovate-config": {
     "default": {
-      "extends": [
-        "config:base",
-        ":maintainLockFilesWeekly"
-      ],
+      "extends": ["config:base", ":maintainLockFilesWeekly"],
       "devDependencies": {
-        "extends": [
-          "group:all"
-        ],
         "packageRules": [
           {
-            "packagePatterns": [
-              "*"
-            ],
+            "packagePatterns": ["*"],
             "groupName": "all dev"
           },
           {
-            "packagePatterns": [
-              "eslint"
-            ],
+            "packagePatterns": ["eslint"],
             "groupName": "eslint"
           },
           {
-            "packagePatterns": [
-              "semantic-release"
-            ],
+            "packagePatterns": ["semantic-release"],
             "groupName": "semantic-release"
           }
         ]
