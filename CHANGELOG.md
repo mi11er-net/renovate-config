@@ -1,3 +1,11 @@
+<a name="1.1.2"></a>
+## [1.1.2](https://github.com/mi11er-net/renovate-config/compare/v1.1.1...v1.1.2) (2018-05-03)
+
+
+### Bug Fixes
+
+* **renovate:** use extends for lockfile maintenance ([5769ce8](https://github.com/mi11er-net/renovate-config/commit/5769ce8))
+
 <a name="1.1.1"></a>
 ## [1.1.1](https://github.com/mi11er-net/renovate-config/compare/v1.1.0...v1.1.1) (2018-04-13)
 
