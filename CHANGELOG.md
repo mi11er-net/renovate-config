@@ -1,3 +1,11 @@
+<a name="1.1.3"></a>
+## [1.1.3](https://github.com/mi11er-net/renovate-config/compare/v1.1.2...v1.1.3) (2018-05-03)
+
+
+### Bug Fixes
+
+* **renovate:** don't extend "group:all" ([8a7acf5](https://github.com/mi11er-net/renovate-config/commit/8a7acf5))
+
 <a name="1.1.2"></a>
 ## [1.1.2](https://github.com/mi11er-net/renovate-config/compare/v1.1.1...v1.1.2) (2018-05-03)
 
