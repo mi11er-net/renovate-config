@@ -1,3 +1,11 @@
+<a name="1.1.5"></a>
+## [1.1.5](https://github.com/mi11er-net/renovate-config/compare/v1.1.4...v1.1.5) (2018-05-16)
+
+
+### Bug Fixes
+
+* **renovate-config:** temporarily renable groups ([17e23f0](https://github.com/mi11er-net/renovate-config/commit/17e23f0))
+
 <a name="1.1.4"></a>
 ## [1.1.4](https://github.com/mi11er-net/renovate-config/compare/v1.1.3...v1.1.4) (2018-05-16)
 
