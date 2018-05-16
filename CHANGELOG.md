@@ -1,3 +1,11 @@
+<a name="1.1.4"></a>
+## [1.1.4](https://github.com/mi11er-net/renovate-config/compare/v1.1.3...v1.1.4) (2018-05-16)
+
+
+### Bug Fixes
+
+* **renovate-config:** temporarily remove groupings. ([5e71c1b](https://github.com/mi11er-net/renovate-config/commit/5e71c1b))
+
 <a name="1.1.3"></a>
 ## [1.1.3](https://github.com/mi11er-net/renovate-config/compare/v1.1.2...v1.1.3) (2018-05-03)
 
