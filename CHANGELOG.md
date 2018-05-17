@@ -1,3 +1,11 @@
+<a name="1.1.6"></a>
+## [1.1.6](https://github.com/mi11er-net/renovate-config/compare/v1.1.5...v1.1.6) (2018-05-17)
+
+
+### Bug Fixes
+
+* **renovate-config:** migrate to new renovate app config style ([f25b50d](https://github.com/mi11er-net/renovate-config/commit/f25b50d))
+
 <a name="1.1.5"></a>
 ## [1.1.5](https://github.com/mi11er-net/renovate-config/compare/v1.1.4...v1.1.5) (2018-05-16)
 
