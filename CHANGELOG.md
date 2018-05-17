@@ -1,3 +1,11 @@
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/mi11er-net/renovate-config/compare/v1.2.0...v1.3.0) (2018-05-17)
+
+
+### Features
+
+* **renovate config:** don't renovate circleci so much ([b58638a](https://github.com/mi11er-net/renovate-config/commit/b58638a))
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/mi11er-net/renovate-config/compare/v1.1.6...v1.2.0) (2018-05-17)
 
