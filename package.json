@@ -100,7 +100,11 @@
     "default": {
       "extends": [
         "config:base",
-        ":maintainLockFilesWeekly"
+        ":maintainLockFilesWeekly",
+        ":widenPeerDependencies",
+        ":prHourlyLimit4",
+        ":rebaseStalePrs",
+        ":prNotPending"
       ],
       "packageRules": [
         {
