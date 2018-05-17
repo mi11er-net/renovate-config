@@ -1,3 +1,11 @@
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/mi11er-net/renovate-config/compare/v1.1.6...v1.2.0) (2018-05-17)
+
+
+### Features
+
+* **renovate config:** use addtional presets ([11a36d5](https://github.com/mi11er-net/renovate-config/commit/11a36d5))
+
 <a name="1.1.6"></a>
 ## [1.1.6](https://github.com/mi11er-net/renovate-config/compare/v1.1.5...v1.1.6) (2018-05-17)
 
