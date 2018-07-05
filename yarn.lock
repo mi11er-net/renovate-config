@@ -3510,8 +3510,8 @@ pkg-dir@^1.0.0:
     find-up "^1.0.0"
 
 please-upgrade-node@^3.0.2:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/please-upgrade-node/-/please-upgrade-node-3.1.0.tgz#a2616de1d52b851949f2ab2d89b3e0ba28a02042"
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/please-upgrade-node/-/please-upgrade-node-3.1.1.tgz#ed320051dfcc5024fae696712c8288993595e8ac"
   dependencies:
     semver-compare "^1.0.0"
 
