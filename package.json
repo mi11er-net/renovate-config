@@ -37,6 +37,7 @@
     "@capaj/npm-audit-ci": "1.0.5",
     "@mi11er/eslint-config": "2.3.0",
     "@semantic-release/changelog": "2.1.1",
+    "@semantic-release/exec": "2.2.4",
     "@semantic-release/git": "6.0.1",
     "commitizen": "2.10.1",
     "cz-conventional-changelog": "2.1.0",
@@ -69,6 +70,14 @@
       {
         "path": "@semantic-release/npm",
         "tarballDir": "release"
+      },
+      {
+        "path": "@semantic-release/exec",
+        "cmd": "npx sort-package-json"
+      },
+      {
+        "path": "@semantic-release/exec",
+        "cmd": "npx pretty-quick"
       },
       {
         "path": "@semantic-release/git",
