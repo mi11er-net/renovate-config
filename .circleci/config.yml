@@ -11,19 +11,22 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-          - v1-dependencies-{{ .Branch }}-{{ checksum "yarn.lock" }}
-          - v1-dependencies-{{ .Branch }}-
-          - v1-dependencies-
+          - v2-dependencies-{{ .Branch }}-{{ checksum "package-lock.json" }}
+          - v2-dependencies-{{ .Branch }}-
+          - v2-dependencies-
       - run:
-          name: yarn install
-          command: yarn install --frozen-lockfile
-          environment:
-            HUSKY_IGNORE_CI: true
+          name: update-npm
+          command: 'sudo npm install -g npm@latest'
+      - run:
+          name: install-npm-depndencies
+          command: 'npm ci'
       - save_cache:
-          key: v1-dependencies-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          key: v2-dependencies-{{ .Branch }}-{{ checksum "package-lock.json" }}
           paths:
-            - node_modules
-      - run: yarn test
+            - $HOME/.npm
+      - run:
+          name: test
+          command: npm test
       - persist_to_workspace:
           root: ~/project
           paths:
@@ -34,7 +37,7 @@ jobs:
       - attach_workspace:
           at: ~/project
       - run: .circleci/setup-git.sh > /dev/null 2>&1
-      - run: yarn semantic-release
+      - run: npx semantic-release
 
 workflows:
   version: 2
