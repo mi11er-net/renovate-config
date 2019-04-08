@@ -21,12 +21,12 @@
   ],
   "scripts": {
     "audit": "npm-audit-ci -m",
-    "precommit": "run-s lint-staged pretty-quick audit",
     "lint": "eslint --fix .",
     "lint-staged": "lint-staged",
+    "precommit": "run-s lint-staged pretty-quick audit",
+    "pretty-quick": "pretty-quick --staged",
     "sort-package-json": "sort-package-json",
-    "test": "run-s audit",
-    "pretty-quick": "pretty-quick --staged"
+    "test": "run-s audit"
   },
   "config": {
     "commitizen": {
@@ -116,6 +116,9 @@
         ":rebaseStalePrs",
         ":prNotPending"
       ],
+      "circleci": {
+        "enabled": false
+      },
       "packageRules": [
         {
           "packagePatterns": "*",
@@ -139,10 +142,7 @@
           ],
           "groupName": "semantic-release"
         }
-      ],
-      "circleci": {
-        "enabled": false
-      }
+      ]
     }
   }
 }
