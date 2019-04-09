@@ -116,31 +116,27 @@
         ":rebaseStalePrs",
         ":prNotPending"
       ],
-      "circleci": {
-        "enabled": false
+      "lockFileMaintenance": {
+        "automerge": true
       },
       "packageRules": [
         {
+          "languages": [
+            "js"
+          ],
           "packagePatterns": "*",
           "groupName": "All Dev",
           "depTypeList": [
             "devDependencies"
-          ],
-          "circleci": {
-            "enabled": true
-          }
+          ]
         },
         {
-          "packagePatterns": [
-            "eslint"
+          "managers": [
+            "circleci"
           ],
-          "groupName": "eslint"
-        },
-        {
-          "packagePatterns": [
-            "semantic-release"
-          ],
-          "groupName": "semantic-release"
+          "groupName": null,
+          "automerge": true,
+          "schedule": "at any time"
         }
       ]
     }
