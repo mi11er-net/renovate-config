@@ -23,10 +23,15 @@
     "audit": "npm-audit-ci -m",
     "lint": "eslint --fix .",
     "lint-staged": "lint-staged",
-    "precommit": "run-s lint-staged pretty-quick audit",
     "pretty-quick": "pretty-quick --staged",
     "sort-package-json": "sort-package-json",
     "test": "run-s audit"
+  },
+  "husky": {
+    "skipCI": false,
+    "hooks": {
+      "pre-commit": "run-s lint-staged pretty-quick audit"
+    }
   },
   "config": {
     "commitizen": {
