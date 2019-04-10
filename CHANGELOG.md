@@ -1,3 +1,9 @@
+# [1.5.0](https://github.com/mi11er-net/renovate-config/compare/v1.4.0...v1.5.0) (2019-04-10)
+
+### Features
+
+- **renovate config:** Change circleci schedule ([405a2fb](https://github.com/mi11er-net/renovate-config/commit/405a2fb))
+
 # [1.4.0](https://github.com/mi11er-net/renovate-config/compare/v1.3.0...v1.4.0) (2019-04-09)
 
 ### Features
