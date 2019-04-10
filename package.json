@@ -136,7 +136,7 @@
           ],
           "groupName": null,
           "automerge": true,
-          "schedule": "at any time"
+          "schedule": "before 6am on Monday"
         }
       ]
     }
