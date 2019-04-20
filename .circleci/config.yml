@@ -11,9 +11,9 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-          - v2-dependencies-{{ .Branch }}-{{ checksum "package-lock.json" }}
-          - v2-dependencies-{{ .Branch }}-
-          - v2-dependencies-
+            - v2-dependencies-{{ .Branch }}-{{ checksum "package-lock.json" }}
+            - v2-dependencies-{{ .Branch }}-
+            - v2-dependencies-
       - run:
           name: update-npm
           command: 'sudo npm install -g npm@latest'
@@ -28,14 +28,15 @@ jobs:
           name: test
           command: npm test
       - persist_to_workspace:
-          root: ~/project
+          root: ~/
           paths:
-            - repo
+            - project/repo
+            - .ssh
   release:
     <<: *defaults
     steps:
       - attach_workspace:
-          at: ~/project
+          at: ~/
       - run: .circleci/setup-git.sh > /dev/null 2>&1
       - run: npx semantic-release
 
