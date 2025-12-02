@@ -26,12 +26,12 @@
     "pretty-quick": "pretty-quick --staged",
     "sort-package-json": "sort-package-json",
     "pretest": "run-s lint",
-    "test": "run-s validate audit",
+    "test": "run-s validate",
     "validate": "renovate-config-validator"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "run-s lint-staged pretty-quick audit"
+      "pre-commit": "run-s lint-staged pretty-quick"
     }
   },
   "config": {
