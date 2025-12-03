@@ -14,6 +14,7 @@
   "license": "MIT",
   "author": "Matthew Miller <matthew@mi11er.net> (https://mi11er.net)",
   "files": [
+    "default.json",
     "package.json",
     "README.MD",
     "CHANGELOG.md",
@@ -51,14 +52,13 @@
     "eslint-config-airbnb-base": "13.1.0",
     "eslint-config-prettier": "4.1.0",
     "eslint-plugin-import": "2.17.2",
-    "eslint-plugin-no-unsafe-innerhtml": "1.0.16",
     "eslint-plugin-node": "8.0.1",
     "eslint-plugin-optimize-regex": "1.1.6",
     "eslint-plugin-scanjs-rules": "0.2.1",
     "eslint-plugin-security": "1.4.0",
     "husky": "1.3.1",
     "lint-staged": "8.1.5",
-    "npm-run-all": "4.1.5",
+    "npm-run-all2": "8.0.4",
     "prettier": "1.17.0",
     "pretty-quick": "1.10.0",
     "renovate": "16.1.1",
@@ -111,42 +111,7 @@
   },
   "renovate": {
     "extends": [
-      "@mi11er"
+      "github>mi11er-net/renovate-config"
     ]
-  },
-  "renovate-config": {
-    "default": {
-      "extends": [
-        "config:base",
-        ":maintainLockFilesWeekly",
-        ":widenPeerDependencies",
-        ":prHourlyLimit4",
-        ":rebaseStalePrs",
-        ":prNotPending"
-      ],
-      "lockFileMaintenance": {
-        "automerge": true
-      },
-      "packageRules": [
-        {
-          "languages": [
-            "js"
-          ],
-          "packagePatterns": "*",
-          "groupName": "All Dev",
-          "depTypeList": [
-            "devDependencies"
-          ]
-        },
-        {
-          "managers": [
-            "circleci"
-          ],
-          "groupName": null,
-          "automerge": true,
-          "schedule": "before 6am on Monday"
-        }
-      ]
-    }
   }
 }
