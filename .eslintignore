@@ -1,9 +1,0 @@
-# Dependency directories
-/node_modules/
-
-# Release
-/release/
-
-# Let's lint these
-!/.prettierrc.js
-!/.eslintrc.js

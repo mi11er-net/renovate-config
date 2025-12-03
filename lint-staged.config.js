@@ -1,4 +1,4 @@
-module.exports = {
-  'package.json': ['sort-package-json', 'git add'],
-  '*.js': ['eslint --fix', 'git add'],
+export default {
+  'package.json': ['sort-package-json'],
+  '*.js': ['eslint --fix'],
 };
