@@ -1,0 +1,1 @@
+npx run-s lint-staged pretty-quick
