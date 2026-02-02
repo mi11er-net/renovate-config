@@ -61,7 +61,7 @@
     "npm-run-all2": "8.0.4",
     "prettier": "1.19.1",
     "pretty-quick": "1.11.1",
-    "renovate": "16.1.1",
+    "renovate": "19.38.7",
     "semantic-release": "24.2.9",
     "sort-package-json": "1.57.0"
   },
