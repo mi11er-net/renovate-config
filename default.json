@@ -1,29 +1,73 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base",
-    ":dependencyDashboard",
-    ":maintainLockFilesWeekly",
+    "config:recommended",
     ":widenPeerDependencies",
-    ":prHourlyLimit4",
+    ":maintainLockFilesWeekly",
     ":rebaseStalePrs",
     ":prNotPending"
   ],
+  "prHourlyLimit": 10,
   "lockFileMaintenance": {
     "automerge": true
   },
   "packageRules": [
     {
-      "matchCategories": ["js"],
-      "matchPackagePatterns": ["*"],
-      "groupName": "All Dev",
-      "matchDepTypes": ["devDependencies"]
+      "description": "Wait 3 days before proposing npm updates (72-hour unpublish window)",
+      "matchDatasources": ["npm"],
+      "minimumReleaseAge": "3 days"
     },
     {
+      "description": "Group and automerge minor/patch npm devDependency updates",
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "dev dependencies",
+      "automerge": true
+    },
+    {
+      "description": "Major devDependency updates: individual PRs, no automerge",
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["major"],
+      "groupName": null,
+      "automerge": false
+    },
+    {
+      "description": "Automerge CircleCI image/orb updates on Monday mornings",
       "matchManagers": ["circleci"],
       "groupName": null,
       "automerge": true,
-      "schedule": "before 6am on Monday"
+      "schedule": ["before 6am on Monday"]
+    },
+    {
+      "description": "Automerge GitHub Actions digest updates (SHA pin refresh, no behavior change)",
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["digest"],
+      "automerge": true
+    },
+    {
+      "description": "Group GitHub Actions version bumps for manual review",
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "GitHub Actions"
+    },
+    {
+      "description": "Automerge Docker digest updates (image rebuild, no version change)",
+      "matchDatasources": ["docker"],
+      "matchUpdateTypes": ["digest"],
+      "automerge": true
+    },
+    {
+      "description": "Group Docker image minor/patch version bumps for manual review",
+      "matchDatasources": ["docker"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "Docker images"
+    },
+    {
+      "description": "Group and automerge NuGet minor/patch updates",
+      "matchManagers": ["nuget"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "NuGet packages",
+      "automerge": true
     }
   ]
 }
