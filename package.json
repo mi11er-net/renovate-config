@@ -30,7 +30,7 @@
     "sort-package-json": "sort-package-json",
     "pretest": "run-s lint",
     "test": "run-s validate",
-    "validate": "renovate-config-validator"
+    "validate": "renovate-config-validator default.json"
   },
   "config": {
     "commitizen": {
