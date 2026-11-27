@@ -37,6 +37,14 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
+  "overrides": {
+    "cacache": {
+      "glob": "^14.0.3"
+    },
+    "editorconfig": {
+      "minimatch": "~11.0.5"
+    }
+  },
   "devDependencies": {
     "@mi11er/eslint-config": "^3.0.5",
     "commitizen": "^4.3.2",
@@ -52,7 +60,7 @@
     "npm-run-all2": "^9.0.0",
     "prettier": "^3.0.0",
     "pretty-quick": "^4.0.0",
-    "renovate": "^43.0.0",
+    "renovate": "^45.1.0",
     "sort-package-json": "^4.0.0"
   },
   "renovate": {
